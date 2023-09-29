@@ -4,6 +4,8 @@ const app = express()
 
 app.use(express.static("./navbar-app"))
 
+//static pushes all files from the folder, the files are later handled by express automatically 
+
 app.get("/", (req, res)=>{
   res.sendFile(path.resolve(__dirname, "./navbar-app/index.html"))
 })
