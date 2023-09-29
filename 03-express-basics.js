@@ -3,7 +3,7 @@ const path = require('path')
 const app = express()
 
 app.use(express.static("./navbar-app"))
-
+//.static() pushes all static files to the server and renders it
 //static pushes all files from the folder, the files are later handled by express automatically 
 
 app.get("/", (req, res)=>{
