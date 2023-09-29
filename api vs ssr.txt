@@ -1,0 +1,13 @@
+EXPRESS.JS 
+API - setting up an http interface to interact with our data, data is sent through json.
+Server sends the data which is processed using the .json() method, which ca n be later stringified.
+
+-> JSON
+-> Send Data
+-> Res.json()
+
+SSR - render() method helps us in rendering the elements into the server, in a way sending a template.
+
+-> Template
+-> send Template
+-> Res.render()

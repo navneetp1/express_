@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const {people, products} = require('./data')
+const {people} = require('./data')
 
 app.get('/', (req, res)=>{
-  res.json(products)
+  res.json(people)
 })
 
 app.listen(5000, ()=>{
