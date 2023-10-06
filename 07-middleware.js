@@ -1,17 +1,28 @@
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
 const logger = require('./logger')
-
-
-//to use the middleware in all routes - we use app.use(<middleware>)
-app.use(logger)
+const authorize = require('./authorize')
 
 //applying middleware to specific routes
 //app.use('/api', logger)
 //logger would be applied to any path starting from the given - /api path
 
 
-app.get('/',  (req, res)=>{
+//to use the middleware in all routes - we use app.use(<middleware>)
+//logger and authorize being the middleware here
+
+
+//middlewares can be - custom / pre-defined / third - party
+// app.use({authorize, logger})
+//app.use(express.static(""))
+//app.use(morgan('tiny))
+
+
+///passing multiple middlewares into one route - [logger, authorize]
+app.use(morgan('tiny'))
+app.get('/', (req, res)=>{
+  console.log(req.user)
   res.send("<h1>Home Page</h1>")
 })
 

@@ -2,7 +2,8 @@
   "dependencies": {
     "bootstrap": "^5.3.1",
     "express": "^4.18.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0"
   },
   "name": "node-js",
   "version": "1.0.0",
